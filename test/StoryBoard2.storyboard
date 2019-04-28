@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--SecondVIewController-->
         <scene sceneID="q3A-SB-OBB">
             <objects>
-                <viewController storyboardIdentifier="StoryBoard2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jhE-zg-ckS" customClass="ViewController" customModule="test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StoryBoard2" title="SecondVIewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jhE-zg-ckS" customClass="SecondViewController" customModule="test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="view" id="iBi-va-e68">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -33,8 +33,8 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="jhE-zg-ckS" id="UxB-R8-1Hf"/>
-                                    <outlet property="delegate" destination="jhE-zg-ckS" id="haA-7v-obj"/>
+                                    <outlet property="dataSource" destination="jhE-zg-ckS" id="8Zi-GD-PXd"/>
+                                    <outlet property="delegate" destination="jhE-zg-ckS" id="hJA-nE-esD"/>
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="StoryBoard2" text="2ページ目だよ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iDH-QE-261">
@@ -48,9 +48,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Xey-n5-qa4"/>
                     </view>
-                    <connections>
-                        <outlet property="tableView" destination="GeH-0o-HOz" id="5xx-2P-OKm"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PUg-7Q-PWv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
