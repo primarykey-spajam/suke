@@ -13,7 +13,19 @@
 		53FE93D322753668005C58FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53FE93D222753668005C58FA /* Assets.xcassets */; };
 		53FE93D622753668005C58FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53FE93D422753668005C58FA /* LaunchScreen.storyboard */; };
 		53FE93DE2275BC29005C58FA /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FE93DD2275BC29005C58FA /* RatingControl.swift */; };
+		53FE93E02275D91F005C58FA /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FE93DF2275D91F005C58FA /* Meal.swift */; };
+		53FE93EB2275DD79005C58FA /* IOSTutorialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FE93EA2275DD79005C58FA /* IOSTutorialTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		53FE93ED2275DD79005C58FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 53FE93C022753667005C58FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 53FE93C722753667005C58FA;
+			remoteInfo = IOSTutorial;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		53FE93C822753667005C58FA /* IOSTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOSTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,12 +34,23 @@
 		53FE93D022753667005C58FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		53FE93D222753668005C58FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53FE93D522753668005C58FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		53FE93D722753668005C58FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53FE93DD2275BC29005C58FA /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
+		53FE93DF2275D91F005C58FA /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		53FE93E32275DC97005C58FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53FE93E82275DD79005C58FA /* IOSTutorialTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IOSTutorialTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		53FE93EA2275DD79005C58FA /* IOSTutorialTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSTutorialTests.swift; sourceTree = "<group>"; };
+		53FE93EC2275DD79005C58FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		53FE93C522753667005C58FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53FE93E52275DD79005C58FA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				53FE93CA22753667005C58FA /* IOSTutorial */,
+				53FE93E92275DD79005C58FA /* IOSTutorialTests */,
 				53FE93C922753667005C58FA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				53FE93C822753667005C58FA /* IOSTutorial.app */,
+				53FE93E82275DD79005C58FA /* IOSTutorialTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -59,12 +84,22 @@
 				53FE93CB22753667005C58FA /* AppDelegate.swift */,
 				53FE93CD22753667005C58FA /* ViewController.swift */,
 				53FE93CF22753667005C58FA /* Main.storyboard */,
+				53FE93DF2275D91F005C58FA /* Meal.swift */,
 				53FE93DD2275BC29005C58FA /* RatingControl.swift */,
 				53FE93D222753668005C58FA /* Assets.xcassets */,
 				53FE93D422753668005C58FA /* LaunchScreen.storyboard */,
-				53FE93D722753668005C58FA /* Info.plist */,
+				53FE93E32275DC97005C58FA /* Info.plist */,
 			);
 			path = IOSTutorial;
+			sourceTree = "<group>";
+		};
+		53FE93E92275DD79005C58FA /* IOSTutorialTests */ = {
+			isa = PBXGroup;
+			children = (
+				53FE93EA2275DD79005C58FA /* IOSTutorialTests.swift */,
+				53FE93EC2275DD79005C58FA /* Info.plist */,
+			);
+			path = IOSTutorialTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +122,24 @@
 			productReference = 53FE93C822753667005C58FA /* IOSTutorial.app */;
 			productType = "com.apple.product-type.application";
 		};
+		53FE93E72275DD79005C58FA /* IOSTutorialTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53FE93F12275DD79005C58FA /* Build configuration list for PBXNativeTarget "IOSTutorialTests" */;
+			buildPhases = (
+				53FE93E42275DD79005C58FA /* Sources */,
+				53FE93E52275DD79005C58FA /* Frameworks */,
+				53FE93E62275DD79005C58FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				53FE93EE2275DD79005C58FA /* PBXTargetDependency */,
+			);
+			name = IOSTutorialTests;
+			productName = IOSTutorialTests;
+			productReference = 53FE93E82275DD79005C58FA /* IOSTutorialTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -99,6 +152,10 @@
 				TargetAttributes = {
 					53FE93C722753667005C58FA = {
 						CreatedOnToolsVersion = 10.2.1;
+					};
+					53FE93E72275DD79005C58FA = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 53FE93C722753667005C58FA;
 					};
 				};
 			};
@@ -116,6 +173,7 @@
 			projectRoot = "";
 			targets = (
 				53FE93C722753667005C58FA /* IOSTutorial */,
+				53FE93E72275DD79005C58FA /* IOSTutorialTests */,
 			);
 		};
 /* End PBXProject section */
@@ -131,6 +189,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		53FE93E62275DD79005C58FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -139,12 +204,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				53FE93CE22753667005C58FA /* ViewController.swift in Sources */,
+				53FE93E02275D91F005C58FA /* Meal.swift in Sources */,
 				53FE93DE2275BC29005C58FA /* RatingControl.swift in Sources */,
 				53FE93CC22753667005C58FA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		53FE93E42275DD79005C58FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53FE93EB2275DD79005C58FA /* IOSTutorialTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		53FE93EE2275DD79005C58FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 53FE93C722753667005C58FA /* IOSTutorial */;
+			targetProxy = 53FE93ED2275DD79005C58FA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		53FE93CF22753667005C58FA /* Main.storyboard */ = {
@@ -318,6 +400,46 @@
 			};
 			name = Release;
 		};
+		53FE93EF2275DD79005C58FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XSMX25A839;
+				INFOPLIST_FILE = IOSTutorialTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = spajam.IOSTutorialTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IOSTutorial.app/IOSTutorial";
+			};
+			name = Debug;
+		};
+		53FE93F02275DD79005C58FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XSMX25A839;
+				INFOPLIST_FILE = IOSTutorialTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = spajam.IOSTutorialTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IOSTutorial.app/IOSTutorial";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -335,6 +457,15 @@
 			buildConfigurations = (
 				53FE93DB22753668005C58FA /* Debug */,
 				53FE93DC22753668005C58FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53FE93F12275DD79005C58FA /* Build configuration list for PBXNativeTarget "IOSTutorialTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53FE93EF2275DD79005C58FA /* Debug */,
+				53FE93F02275DD79005C58FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
