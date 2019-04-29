@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GlQ-DU-jFj">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--New Meal-->
+        <scene sceneID="Tf7-Je-xAN">
+            <objects>
+                <viewController id="GlQ-DU-jFj" customClass="MealViewController" customModule="IOSTutorial" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AuW-nW-70L">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wbt-J8-iMB">
+                                <rect key="frame" x="0.0" y="64" width="414" height="30"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter meal name " minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oHC-bg-ZQD">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="oHC-bg-ZQD" secondAttribute="trailing" id="wOS-OD-0SK"/>
+                                </constraints>
+                            </stackView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Bii-T3-slH">
+                                <rect key="frame" x="84" y="146" width="240" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="u36-WF-Ohz" appends="YES" id="4Em-Y0-AXW"/>
+                                </connections>
+                            </imageView>
+                            <stackView autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6Mj-67-B8J" customClass="RatingControl" customModule="IOSTutorial" customModuleProvider="target">
+                                <rect key="frame" x="87" y="394" width="234" height="43"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="starSize">
+                                        <size key="value" width="40" height="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="starCount">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9J4-bC-Nhs" firstAttribute="trailing" secondItem="wbt-J8-iMB" secondAttribute="trailing" id="8jU-0D-GtI"/>
+                            <constraint firstItem="wbt-J8-iMB" firstAttribute="leading" secondItem="9J4-bC-Nhs" secondAttribute="leading" id="Aqo-bc-oTA"/>
+                            <constraint firstItem="wbt-J8-iMB" firstAttribute="top" secondItem="9J4-bC-Nhs" secondAttribute="top" constant="20" id="rhT-zr-wtF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9J4-bC-Nhs"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Meal" id="IPh-Fn-ZEo">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="YM2-Nb-qEC">
+                            <connections>
+                                <action selector="cancel:" destination="GlQ-DU-jFj" id="Fb1-u4-JoJ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="0g7-Al-IWc">
+                            <connections>
+                                <segue destination="lOJ-ih-9jo" kind="unwind" unwindAction="unwindToMealListWithSender:" id="nzW-wb-bgX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="nameTextField" destination="oHC-bg-ZQD" id="DFe-wP-luF"/>
+                        <outlet property="photoImageView" destination="Bii-T3-slH" id="eO3-nw-Kob"/>
+                        <outlet property="ratingControl" destination="6Mj-67-B8J" id="Xc0-r3-WsM"/>
+                        <outlet property="saveButton" destination="0g7-Al-IWc" id="Inp-nX-7PC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TO2-PS-awc" sceneMemberID="firstResponder"/>
+                <exit id="lOJ-ih-9jo" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="u36-WF-Ohz">
+                    <connections>
+                        <action selector="selectImageFromPhotoLibrary:" destination="GlQ-DU-jFj" id="wdr-b9-1xc"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-1133" y="179"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Logo" width="60" height="60"/>
+    </resources>
+</document>

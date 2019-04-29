@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -29,7 +28,6 @@
         <!--Your Meals-->
         <scene sceneID="cn4-wK-KrF">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IPp-0P-rWd" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="Hxb-6P-yQF" customClass="MealTableViewController" customModule="IOSTutorial" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelectionDuringEditing="YES" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="p8Y-Rx-sba">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -67,7 +65,7 @@
                                     <outlet property="nameLabel" destination="g7N-GK-xMp" id="yHp-Qj-DDE"/>
                                     <outlet property="photoImageView" destination="0Ro-sk-Svj" id="1ho-SS-i8Z"/>
                                     <outlet property="ratingControl" destination="5QA-rx-GZJ" id="Lyz-Pe-IbZ"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowDetail" id="AFH-kQ-L1i"/>
+                                    <segue destination="2yk-9M-3H9" kind="show" identifier="ShowDetail" id="bei-8L-V1J"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -85,88 +83,19 @@
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IPp-0P-rWd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2849.275362318841" y="178.79464285714286"/>
         </scene>
-        <!--New Meal-->
-        <scene sceneID="tne-QT-ifu">
+        <!--MealView-->
+        <scene sceneID="n8v-88-8jq">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MealViewController" customModule="IOSTutorial" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="BJJ-aY-N4l">
-                                <rect key="frame" x="0.0" y="108" width="414" height="30"/>
-                                <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter meal name " minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Szo-rm-rpL">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
-                                    </textField>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="Szo-rm-rpL" secondAttribute="trailing" id="Hy3-cd-60G"/>
-                                </constraints>
-                            </stackView>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="wjf-su-tn1">
-                                <rect key="frame" x="84" y="146" width="240" height="240"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="dDr-43-d65" appends="YES" id="Bgw-Ui-Hx5"/>
-                                </connections>
-                            </imageView>
-                            <stackView autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hCu-sF-n0j" customClass="RatingControl" customModule="IOSTutorial" customModuleProvider="target">
-                                <rect key="frame" x="87" y="394" width="234" height="43"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="size" keyPath="starSize">
-                                        <size key="value" width="40" height="40"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="starCount">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="BJJ-aY-N4l" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="AfG-ia-5eQ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BJJ-aY-N4l" secondAttribute="trailing" id="FhP-5H-BqZ"/>
-                            <constraint firstItem="BJJ-aY-N4l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KGc-tV-XqR"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="New Meal" id="Ryg-C8-vWl">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="zTI-zy-sdE">
-                            <connections>
-                                <action selector="cancel:" destination="BYZ-38-t0r" id="Idj-MR-5lE"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Ln4-PD-CsX">
-                            <connections>
-                                <segue destination="i3H-r5-WV6" kind="unwind" unwindAction="unwindToMealListWithSender:" id="gwz-OT-TmO"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="nameTextField" destination="Szo-rm-rpL" id="B8w-Ad-ygF"/>
-                        <outlet property="photoImageView" destination="wjf-su-tn1" id="ulI-kw-ddC"/>
-                        <outlet property="ratingControl" destination="hCu-sF-n0j" id="O8g-l1-NKd"/>
-                        <outlet property="saveButton" destination="Ln4-PD-CsX" id="PDO-eI-JK5"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <exit id="i3H-r5-WV6" userLabel="Exit" sceneMemberID="exit"/>
-                <tapGestureRecognizer id="dDr-43-d65">
-                    <connections>
-                        <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="e88-xq-2v3"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <viewControllerPlaceholder storyboardName="MealView" id="2yk-9M-3H9" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="XJ2-Rc-lXP"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1gk-f3-Iyb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1142.0289855072465" y="178.79464285714286"/>
+            <point key="canvasLocation" x="-1083" y="179"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="GXX-6d-aFf">
@@ -179,7 +108,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Pnc-WI-Pzb"/>
+                        <segue destination="2yk-9M-3H9" kind="relationship" relationship="rootViewController" id="45o-S4-ODw"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="47C-kC-p7h" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -189,9 +118,8 @@
     </scenes>
     <resources>
         <image name="Default" width="256" height="300"/>
-        <image name="Logo" width="60" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="AFH-kQ-L1i"/>
+        <segue reference="45o-S4-ODw"/>
     </inferredMetricsTieBreakers>
 </document>
