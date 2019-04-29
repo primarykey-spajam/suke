@@ -29,13 +29,14 @@
         <!--Your Meals-->
         <scene sceneID="cn4-wK-KrF">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IPp-0P-rWd" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="Hxb-6P-yQF" customClass="MealTableViewController" customModule="IOSTutorial" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="p8Y-Rx-sba" customClass="RatingControll" customModule="IOSTutorial">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelectionDuringEditing="YES" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="p8Y-Rx-sba">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MealTableViewCell" rowHeight="90" id="ybg-At-BJX" customClass="MealTableViewCell" customModule="IOSTutorial">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" indentationWidth="10" reuseIdentifier="MealTableViewCell" editingAccessoryType="disclosureIndicator" rowHeight="90" id="ybg-At-BJX" customClass="MealTableViewCell" customModule="IOSTutorial">
                                 <rect key="frame" x="0.0" y="28" width="414" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ybg-At-BJX" id="MQ0-OM-Mt5">
@@ -53,19 +54,24 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <stackView opaque="NO" contentMode="left" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5QA-rx-GZJ" customClass="RatingControl" customModule="IOSTutorial" customModuleProvider="target">
+                                        <stackView opaque="NO" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5QA-rx-GZJ" customClass="RatingControl" customModule="IOSTutorial" customModuleProvider="target">
                                             <rect key="frame" x="98" y="35" width="223" height="44"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </stackView>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
                                 <connections>
                                     <outlet property="nameLabel" destination="g7N-GK-xMp" id="yHp-Qj-DDE"/>
                                     <outlet property="photoImageView" destination="0Ro-sk-Svj" id="1ho-SS-i8Z"/>
                                     <outlet property="ratingControl" destination="5QA-rx-GZJ" id="Lyz-Pe-IbZ"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowDetail" id="AFH-kQ-L1i"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="Hxb-6P-yQF" id="3OV-10-dQ6"/>
                             <outlet property="delegate" destination="Hxb-6P-yQF" id="16B-MS-fMg"/>
@@ -74,12 +80,11 @@
                     <navigationItem key="navigationItem" title="Your Meals" id="cs3-u0-E3g">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ywS-yn-Jh7">
                             <connections>
-                                <segue destination="Wch-fE-kHe" kind="presentation" identifier=" AddItem" id="gkH-Il-Tqo"/>
+                                <segue destination="Wch-fE-kHe" kind="presentation" identifier="AddItem" id="gkH-Il-Tqo"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IPp-0P-rWd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2849.275362318841" y="178.79464285714286"/>
         </scene>
@@ -179,11 +184,14 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="47C-kC-p7h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1893" y="179"/>
+            <point key="canvasLocation" x="-1933" y="554"/>
         </scene>
     </scenes>
     <resources>
         <image name="Default" width="256" height="300"/>
         <image name="Logo" width="60" height="60"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="AFH-kQ-L1i"/>
+    </inferredMetricsTieBreakers>
 </document>
