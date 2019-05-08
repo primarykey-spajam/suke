@@ -18,6 +18,8 @@
 		5305658822831D350025E76F /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5305658722831D350025E76F /* Realm.framework */; };
 		5305658A22831D4B0025E76F /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5305658922831D4B0025E76F /* RealmSwift.framework */; };
 		5305658C228322280025E76F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5305658B228322280025E76F /* Alamofire.framework */; };
+		530565902283272F0025E76F /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5305658F2283272F0025E76F /* History.storyboard */; };
+		53056592228328DE0025E76F /* Dao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53056591228328DE0025E76F /* Dao.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		5305658722831D350025E76F /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		5305658922831D4B0025E76F /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		5305658B228322280025E76F /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		5305658F2283272F0025E76F /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
+		53056591228328DE0025E76F /* Dao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dao.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +98,10 @@
 				5302B7E92279D932004E1AF8 /* WikiViewController.swift */,
 				5303B4D4227731E700AE13FB /* AppDelegate.swift */,
 				5303B4D6227731E700AE13FB /* ViewController.swift */,
+				5305658F2283272F0025E76F /* History.storyboard */,
 				5303B4D8227731E700AE13FB /* Main.storyboard */,
 				5302B7E52279D29C004E1AF8 /* Wiki.storyboard */,
+				53056591228328DE0025E76F /* Dao.swift */,
 				5303B4DB227731EA00AE13FB /* Assets.xcassets */,
 				5303B4DD227731EA00AE13FB /* LaunchScreen.storyboard */,
 				5303B4E0227731EA00AE13FB /* Info.plist */,
@@ -207,6 +213,7 @@
 				5303B4DF227731EA00AE13FB /* LaunchScreen.storyboard in Resources */,
 				5303B4DC227731EA00AE13FB /* Assets.xcassets in Resources */,
 				5302B7E62279D29C004E1AF8 /* Wiki.storyboard in Resources */,
+				530565902283272F0025E76F /* History.storyboard in Resources */,
 				5303B4DA227731E700AE13FB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,6 +255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53056592228328DE0025E76F /* Dao.swift in Sources */,
 				5303B4D7227731E700AE13FB /* ViewController.swift in Sources */,
 				5302B7EA2279D932004E1AF8 /* WikiViewController.swift in Sources */,
 				5303B4D5227731E700AE13FB /* AppDelegate.swift in Sources */,
