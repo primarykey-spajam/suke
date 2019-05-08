@@ -15,6 +15,9 @@
 		5303B4DC227731EA00AE13FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5303B4DB227731EA00AE13FB /* Assets.xcassets */; };
 		5303B4DF227731EA00AE13FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5303B4DD227731EA00AE13FB /* LaunchScreen.storyboard */; };
 		5303B4EA227731EA00AE13FB /* MusicAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5303B4E9227731EA00AE13FB /* MusicAppTests.swift */; };
+		5305658822831D350025E76F /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5305658722831D350025E76F /* Realm.framework */; };
+		5305658A22831D4B0025E76F /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5305658922831D4B0025E76F /* RealmSwift.framework */; };
+		5305658C228322280025E76F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5305658B228322280025E76F /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +32,7 @@
 
 /* Begin PBXFileReference section */
 		5302B7E52279D29C004E1AF8 /* Wiki.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Wiki.storyboard; sourceTree = "<group>"; };
-		5302B7E92279D932004E1AF8 /* WikiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WikiViewController.swift; path = ../WikiViewController.swift; sourceTree = "<group>"; };
+		5302B7E92279D932004E1AF8 /* WikiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiViewController.swift; sourceTree = "<group>"; };
 		5303B4D1227731E700AE13FB /* MusicApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5303B4D4227731E700AE13FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5303B4D6227731E700AE13FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +43,9 @@
 		5303B4E5227731EA00AE13FB /* MusicAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5303B4E9227731EA00AE13FB /* MusicAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicAppTests.swift; sourceTree = "<group>"; };
 		5303B4EB227731EA00AE13FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5305658722831D350025E76F /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		5305658922831D4B0025E76F /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		5305658B228322280025E76F /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +53,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5305658C228322280025E76F /* Alamofire.framework in Frameworks */,
+				5305658A22831D4B0025E76F /* RealmSwift.framework in Frameworks */,
+				5305658822831D350025E76F /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +75,7 @@
 				5303B4D3227731E700AE13FB /* MusicApp */,
 				5303B4E8227731EA00AE13FB /* MusicAppTests */,
 				5303B4D2227731E700AE13FB /* Products */,
+				5305658622831D350025E76F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +112,16 @@
 			path = MusicAppTests;
 			sourceTree = "<group>";
 		};
+		5305658622831D350025E76F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5305658B228322280025E76F /* Alamofire.framework */,
+				5305658922831D4B0025E76F /* RealmSwift.framework */,
+				5305658722831D350025E76F /* Realm.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -112,6 +132,7 @@
 				5303B4CD227731E700AE13FB /* Sources */,
 				5303B4CE227731E700AE13FB /* Frameworks */,
 				5303B4CF227731E700AE13FB /* Resources */,
+				5305658522831CB90025E76F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -198,6 +219,29 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5305658522831CB90025E76F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5303B4CD227731E700AE13FB /* Sources */ = {
@@ -370,6 +414,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XSMX25A839;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MusicApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -388,6 +436,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XSMX25A839;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MusicApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

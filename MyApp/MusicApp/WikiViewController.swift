@@ -5,86 +5,58 @@
 //  Created by 助永悠輝 on 2019/05/01.
 //  Copyright © 2019 助永悠輝. All rights reserved.
 //
-
 import UIKit
+//TODO: 履歴機能追加
+//TODO: api呼び出し周り
 
-class WikiViewController: UITableViewController {
-
+class WikiViewController: UIViewController, UISearchBarDelegate {
+    
+    @IBOutlet weak var mySearchBar: UISearchBar!
+    @IBOutlet weak var wikiView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        mySearchBar.delegate = self
+        // Do any additional setup after loading the view.
     }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
     }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.text = ""
     }
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        wikiView.text = getWikiDigest(word: searchBar.text)
+        searchBar.text = ""
+        self.view.endEditing(true)
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    struct JsonSample: Codable {
+        var title: String
+        var body: String
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    //ひとまずbodyを返す仕様
+    private func getWikiDigest(word: String?) -> String? {
+        //wiki api
+        //強制アンラップはあんまよくない
+        var url = "http://wikipedia.simpleapi.net/api?keyword=" + word! + "&output=json"
+        url = url.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!
+        let urlOpt = URL(string: url)
+        
+        let request = URLRequest(url: urlOpt!)
+        let task = URLSession.shared.dataTask(with: request) { (data, urlResponse, error) in
+            guard let data = data else { return }
+            let json = try? JSONDecoder().decode([JsonSample].self, from: data)
+            // サブスレッドからViewの値は帰れないらしいからメインスレッドに戻した
+            if let resBody = json?[0].body {
+                DispatchQueue.main.async{self.wikiView.text = resBody}
+            } else {
+                DispatchQueue.main.async{self.wikiView.text = "検索結果が見当たりませんでした"}
+            }
+        }
+        // リクエストを実行
+        task.resume()
+        return "データ取得中"
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

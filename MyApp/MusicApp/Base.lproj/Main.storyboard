@@ -25,20 +25,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sba-y5-lbY">
-                                <rect key="frame" x="71" y="201" width="86" height="86"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="Wikipedia"/>
-                                <connections>
-                                    <segue destination="h17-3G-7Pn" kind="show" id="Tgh-1L-JJe"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pkf-hN-ufk">
-                                <rect key="frame" x="243" y="201" width="86" height="86"/>
+                                <rect key="frame" x="164" y="545" width="86" height="86"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Youtube" image="YouTube"/>
                                 <connections>
                                     <action selector="playVideo:" destination="Yhu-bz-p6Q" eventType="touchUpInside" id="Rjd-Ud-Z0d"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sba-y5-lbY">
+                                <rect key="frame" x="164" y="302" width="86" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Wikipedia"/>
+                                <connections>
+                                    <segue destination="h17-3G-7Pn" kind="show" id="Tgh-1L-JJe"/>
                                 </connections>
                             </button>
                         </subviews>
