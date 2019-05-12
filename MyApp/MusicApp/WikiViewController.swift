@@ -51,12 +51,13 @@ class WikiViewController: UIViewController, UISearchBarDelegate {
             let json = try? JSONDecoder().decode([JsonSample].self, from: data)
             // サブスレッドからViewの値は帰れないらしいからメインスレッドに戻した
             if let resBody = json?[0].body {
-                let historyModel = HistoryModel()
-                historyModel.word = word!
-                historyModel.contents = resBody
-                
-                dao.create(d: historyModel)
-                DispatchQueue.main.async{self.wikiView.text = resBody}
+                DispatchQueue.main.async{
+                    let historyModel = HistoryModel()
+                    historyModel.word = word!
+                    historyModel.contents = resBody
+                    dao.create(d: historyModel)
+                    self.wikiView.text = resBody
+                }
             } else {
                 DispatchQueue.main.async{self.wikiView.text = "検索結果が見当たりませんでした"}
             }

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5302B7E62279D29C004E1AF8 /* Wiki.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5302B7E52279D29C004E1AF8 /* Wiki.storyboard */; };
 		5302B7EA2279D932004E1AF8 /* WikiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5302B7E92279D932004E1AF8 /* WikiViewController.swift */; };
+		5303A27922886DEE0021DBDA /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5303A27822886DEE0021DBDA /* HistoryViewController.swift */; };
+		5303A27B22887AC60021DBDA /* HistoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5303A27A22887AC60021DBDA /* HistoryDetailViewController.swift */; };
 		5303B4D5227731E700AE13FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5303B4D4227731E700AE13FB /* AppDelegate.swift */; };
 		5303B4D7227731E700AE13FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5303B4D6227731E700AE13FB /* ViewController.swift */; };
 		5303B4DA227731E700AE13FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5303B4D8227731E700AE13FB /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 /* Begin PBXFileReference section */
 		5302B7E52279D29C004E1AF8 /* Wiki.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Wiki.storyboard; sourceTree = "<group>"; };
 		5302B7E92279D932004E1AF8 /* WikiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiViewController.swift; sourceTree = "<group>"; };
+		5303A27822886DEE0021DBDA /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		5303A27A22887AC60021DBDA /* HistoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailViewController.swift; sourceTree = "<group>"; };
 		5303B4D1227731E700AE13FB /* MusicApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5303B4D4227731E700AE13FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5303B4D6227731E700AE13FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +103,8 @@
 				5303B4D4227731E700AE13FB /* AppDelegate.swift */,
 				5303B4D6227731E700AE13FB /* ViewController.swift */,
 				5305658F2283272F0025E76F /* History.storyboard */,
+				5303A27A22887AC60021DBDA /* HistoryDetailViewController.swift */,
+				5303A27822886DEE0021DBDA /* HistoryViewController.swift */,
 				5303B4D8227731E700AE13FB /* Main.storyboard */,
 				5302B7E52279D29C004E1AF8 /* Wiki.storyboard */,
 				53056591228328DE0025E76F /* Dao.swift */,
@@ -257,7 +263,9 @@
 			files = (
 				53056592228328DE0025E76F /* Dao.swift in Sources */,
 				5303B4D7227731E700AE13FB /* ViewController.swift in Sources */,
+				5303A27B22887AC60021DBDA /* HistoryDetailViewController.swift in Sources */,
 				5302B7EA2279D932004E1AF8 /* WikiViewController.swift in Sources */,
+				5303A27922886DEE0021DBDA /* HistoryViewController.swift in Sources */,
 				5303B4D5227731E700AE13FB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
